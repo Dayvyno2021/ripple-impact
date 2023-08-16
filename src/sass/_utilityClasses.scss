@@ -1,0 +1,78 @@
+.container{
+  max-width: 151.2rem;
+}
+
+.btn--close{
+  width: 3rem;
+  height: 2px;
+  background-color: $color-primary;
+  position: relative;
+  outline: none;
+  border: none;
+
+  &::after {
+    content: '';
+    width: 3rem;
+    height: 2px;
+    background-color: $color-primary;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+
+  &::before {
+    content: '';
+    width: 3rem;
+    height: 2px;
+    background-color: $color-primary;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+}
+
+.btn--open {
+  width: 3rem;
+  // height: 2px;
+  background-color: $color-w;
+  position: relative;
+  outline: none;
+  border: none;
+
+  &::after {
+    content: '';
+    width: 3rem;
+    height: 2px;
+    background-color: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // bottom: 10px;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: '';
+    width: 3rem;
+    height: 2px;
+    background-color: $color-primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.btn2{
+  background-color: $color-primary;
+  width: 27.2rem;
+  height: 5.6rem;
+  padding: 1.6rem 3.6rem 1.6rem 3.6rem;
+  border-radius: 32px ;
+  color: $color-w;
+  transition: background-color .3s;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($color: $color-primary, $amount: 5);
+  }
+}
