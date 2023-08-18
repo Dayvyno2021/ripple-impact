@@ -115,6 +115,7 @@
 
             @include atSmallMedium{
               padding-right: 0;
+              text-align: center;
             }
 
             span.black{
@@ -143,6 +144,7 @@
 
             @include atSmallMedium {
                 padding-right: 0;
+                text-align: center;
               }
           }
         }
@@ -152,6 +154,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
+          margin: 0 auto;
         }
       }
       
