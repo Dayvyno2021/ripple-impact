@@ -1157,6 +1157,10 @@
     position: relative;
     // background-color: red;
 
+    @include atMedium{
+      height: fit-content;
+    }
+
     &__green-dots{
       position: absolute;
       width: 107px ;
@@ -1175,6 +1179,17 @@
       justify-content: space-between;
       align-items: center;
 
+      @include atLarge1200{
+        width: 100%;
+        padding: 0 2rem;
+      }
+
+      @include atMedium{
+        flex-direction: column;
+        height: fit-content;
+        margin: 5rem 0;
+        // align-items: center;
+      }
       
       &__frame-1{
         display: flex;
@@ -1183,17 +1198,42 @@
         align-items: flex-start;
         width: 552px;
         height: 264px ;
-
-        // background-color: red;
         padding-right: 10rem;
+
+        @include atLarge1200{
+          padding-right: 0;
+        }
+
+        @include atMedium{
+          height: fit-content;
+          // margin: 5rem 0;
+          width: 552px;
+        }
+
+        @include atSmall{
+          height: fit-content;
+          // margin: 5rem 0;
+          width: 350px;
+        }
 
         &>h1{
           text-align: left;
           margin-bottom: 2.4rem;
+          font-size: 3.5rem;
+
+          @include atMedium{
+            text-align: center;
+            align-self: center;
+            padding: 0 1rem;
+          }
         }
 
         &>p{
           text-align: left;
+          @include atMedium {
+              text-align: center;
+              padding: 0 1rem;
+            }
         }
       }
 
@@ -1209,6 +1249,12 @@
         justify-content: space-between;
         border: 1px solid $color-light-grey;
         box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+
+        @include atMedium{
+          margin-top: 5rem;
+          width: 100%;
+          align-items: center;
+        }
 
         &__header{
           display: flex;
@@ -1227,6 +1273,9 @@
           align-items: center;
           justify-content: space-between;
 
+          @include atSmallMedium{
+            width: 100%;
+          }
           
           .individual{
             @include btn1($color-primary);
@@ -1241,6 +1290,12 @@
           .contact__btn{
             height: 40px;
             width: 230px;
+            @include atSmallMedium {
+              width: 200px;
+            }
+            @include atSmall {
+              width: fit-content;
+            }
           }
         }
       }
@@ -1252,6 +1307,10 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include atSmall{
+          width: 350px;
+        }
+
         &--inputs{
           width: 100% ;
           height: 368px;
@@ -1259,22 +1318,20 @@
           flex-direction: column;
           justify-content: space-around;
 
-          // .contact__input{
-          //   width: 100%;
-          //   width: 488px ;
-          //   height: 48px ;
-          //   padding: 16px ;
-          //   border-radius: 16px ;
-          //   border: 1px solid #B5B6B5;
-          //   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #B5B6B5, #B5B6B5);
+          @include atSmall{
+            width: 350px;
+          }
 
-          // }
         }
 
         .form__submit{
           @include btn1($color-primary);
           width: 100%;
           color: $color-w;
+
+          @include atSmall{
+            width: 100%;
+          }
         }
       }
     }
