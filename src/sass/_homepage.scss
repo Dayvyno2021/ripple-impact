@@ -6,13 +6,22 @@
   // top: -1063px left: -2387px
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .payroll{
     max-width: 151.2rem;
     height: 86.541rem;
     position: relative;
-    overflow: hidden; //hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    //overflow: hidden; //hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     // background-color: red;
+    display: block;
+
+    @include atLarge{
+      height: auto;//////////////////////
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &__gradient-1{
       position: absolute;
@@ -54,17 +63,40 @@
       position: absolute;
       top: 16.25rem;
       left: 19.2rem ;
-      // padding-right: 7.1rem;///////////////////////
-      // background-color: yellow;
-
       display: flex;
       flex-direction: column;
+
+      @include atLarge1400{/////////////////////
+        left: 11.25rem;
+      }
+      @include atLarge1300{/////////////////////
+        left: 6.25rem;
+      }
+      @include atLarge1200{/////////////////////
+        left: 3.25rem;
+      }
+
+      @include atLarge{
+        position: static;
+        margin-bottom: 5rem;
+      }
+
+      @include atSmallMedium {
+        width: fit-content;
+        height: fit-content;
+        padding: 2rem;
+      }
 
       &__frame{
         width: 55.2rem ;
         height: 33.2rem;
         display: flex;
         flex-direction: column;
+
+        @include atSmallMedium{
+          width: fit-content;
+          height: fit-content;
+        }
 
         &--text{
           .header--text{
@@ -80,6 +112,11 @@
             letter-spacing: 0em;
             text-align: left;
             padding-right: 8rem;
+
+            @include atSmallMedium{
+              padding-right: 0;
+            }
+
             span.black{
               color: $color-matt-black;
             }
@@ -103,6 +140,10 @@
             text-align: left;
             color: $color-grey-dark;
             padding-right: 8rem;
+
+            @include atSmallMedium {
+                padding-right: 0;
+              }
           }
         }
 
@@ -123,6 +164,20 @@
       top: 9.7rem ;
       left: 79.2rem ;
       opacity: 0.9;
+
+      @include atLarge1400{
+        left: 70rem;////////////////////////////
+      }
+      
+      @include atLarge1300{
+        left: 65rem;////////////////////////////
+      }
+      @include atLarge1200{
+        left: 60rem;////////////////////////////
+      }
+      @include atLarge{
+        position: static;
+      }
       
       .welcome__container{
         width: 100%;
@@ -696,17 +751,25 @@
     background-image: url('../../public/images/slider-background2.png');
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+
+    @include atLarge1512{
+      padding: 16.85rem 3rem;
+    }
 
     &__frame{
       width: 1128px;
       height: 600px ;
-      top: 166.2783203125px ;
-      left: 192px;
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      // background-color: red;
+
+      @include atMedium{
+        height: fit-content;
+        width: 100%;
+      }
 
       &-text{
         width: 826.41px ;
@@ -716,13 +779,23 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        // background-color: red;
 
+        @include atMedium{
+          width: 100%;
+          margin-bottom: 5rem;
+          height: fit-content;
+        }
       }
 
       &-slide{
-        width: 1128px; 
+        width: 100%; 
         height: 320px;
         position: relative;
+
+        @include atMedium{
+          height: fit-content;
+        }
 
         .slider{
           position: absolute;
@@ -733,6 +806,22 @@
           background-image: radial-gradient(50% 50% at 50% 50%, rgba(217, 235, 205, 0.14) 0%, rgba(217, 235, 205, 0.0266) 100%), linear-gradient(0deg, #11453B, #11453B);
           box-shadow: -11px 0px 19px 0px #1717174D;
           box-shadow: 0px 13px 20px 0px #17171733;
+
+          @include atLarge1512{
+            width: fit-content;
+            padding: 60px;
+          }
+
+          @include atLarge1300{
+            padding: 40px;
+          }
+
+          @include atMedium{
+            position: static;//////////////
+            width: 100%;
+            margin-bottom: 5rem;
+            height: 400px;
+          }
 
           display: flex;
           flex-direction: column;
@@ -795,11 +884,19 @@
     padding: 5rem 0;
     justify-content: space-between;
 
+    @include atMedium{
+      height: fit-content;
+    }
+
     &__header{
       height: 116px ;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include atMedium{
+        height: fit-content;
+      }
       // gap: 16px;
     }
 
@@ -810,11 +907,27 @@
       justify-content: space-between;
       align-items: center;
 
+      @include atLarge{
+        width: 950px;
+      }
+
+      @include atMedium{
+        flex-direction: column;
+        // justify-content: center;
+        height: fit-content;
+        align-items: center;
+        width: 100%;
+      }
+
       &--circles{
         width: 347.6143493652344px ;
         height: 682px ;
         border-radius: 63.26686096191406px;
         position: relative;
+
+        @include atMedium{
+          margin: 5rem 0;
+        }
 
         &>img{
           display: inline-block;
@@ -1008,7 +1121,266 @@
 
     }
   }
+
+  .eazipay-demo{
+    max-width: 100% ;
+    height: 947px ;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // background-color: red;
+
+    &__green-dots{
+      position: absolute;
+      width: 107px ;
+      height: 208px ;
+      top: 135px ;
+      left: 0px ;
+      // gap: 16px ;
+      // angle: 90 deg;
+
+    }
+
+    &__details{
+      width: 1128px ;
+      height: 704px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      
+      &__frame-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 552px;
+        height: 264px ;
+
+        // background-color: red;
+        padding-right: 10rem;
+
+        &>h1{
+          text-align: left;
+          margin-bottom: 2.4rem;
+        }
+
+        &>p{
+          text-align: left;
+        }
+      }
+
+      &__frame-2{
+        // background-color: lime;
+        width: 552px ;
+        height: 704px;
+        padding: 32px ;
+        border-radius: 32px ;
+        border: 1px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid $color-light-grey;
+        box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+
+        &__header{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        
+        &__tab{
+          // background-color: red;
+          width: 488px ;
+          height: 56px;
+          display: flex;
+          padding: 8px ;
+          border-radius: 16px ;
+          border: 1.15px solid #E7E8E7;
+          align-items: center;
+          justify-content: space-between;
+
+          
+          .individual{
+            @include btn1($color-primary);
+            border-radius: 1.2rem;
+            color: $color-w;
+          }
+          .company{
+            @include btn1(#F2F1F1);
+            border-radius: 1.2rem;
+          }
+
+          .contact__btn{
+            height: 40px;
+            width: 230px;
+          }
+        }
+      }
+
+      &__contact{
+        width: 488px ;
+        height: 428px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--inputs{
+          width: 100% ;
+          height: 368px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          // .contact__input{
+          //   width: 100%;
+          //   width: 488px ;
+          //   height: 48px ;
+          //   padding: 16px ;
+          //   border-radius: 16px ;
+          //   border: 1px solid #B5B6B5;
+          //   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #B5B6B5, #B5B6B5);
+
+          // }
+        }
+
+        .form__submit{
+          @include btn1($color-primary);
+          width: 100%;
+          color: $color-w;
+        }
+      }
+    }
+  }
+
+  .footer{
+    max-width: 1512px ;
+    height: 320px ;
+    padding: 64px 192px 64px 192px ;
+    border: 1px 0px 0px 0px ;
+    margin-top: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #EAEAEA, #EAEAEA);
+    border-top: 1px solid #EAEAEA;
+
+    &__company{
+      width: 178px ;
+      height: 192px ;
+      // background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 4rem;
+
+      &>a{
+        &>img{
+          display: block;
+          width: 122px ;
+          height: 32px;
+        }
+      }
+
+      &__copyright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &>p{
+          font-size: 1.4rem;
+          text-align: left;
+        }
+      }
+
+      &__social-medias{
+        display: flex;
+        justify-content: space-between;
+
+        .social__media-image{
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+      }
+
+    }
+
+    &__links{
+      width: 825px ;
+      height: 180px ;
+      display: flex;
+      justify-content: space-between;
+
+      &__frame{
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: center;
+
+        &--links{
+          display: flex;
+          flex-direction: column;
+          width: 160px ;
+          height: 132px ;
+          // gap: 12px;
+
+          .footer__sub-link{
+            color: $color-link;
+          //styleName: Body/Normal/Regular;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            &:not(:last-of-type){
+              margin-bottom: 1.2rem;
+            }
+          }
+
+          .footer__send-email{
+            position: relative;
+            width: 25.5rem;
+            height: 4rem;
+            // align-self: flex-end;
+            // background-color: red;
+            // justify-self: flex-end;
+    
+            .email__input{
+              width: 100%;
+              height: 4rem;
+              // border-radius: 1.6rem;
+            }
+    
+            .email__send{
+              position: absolute;
+              right: 1.5rem;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 1.8rem;
+              height: 1.8rem;
+              // background-color: red;
+
+            }
+          }
+        }
+        .contact__us{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+    }
+  }
 }
+
+
 //Handle individual and business animations
 .indi-and-biz__frame-slide-1:hover + .indi-and-biz__frame-slide-2{
   left: 500px

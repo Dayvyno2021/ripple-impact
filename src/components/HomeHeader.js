@@ -32,10 +32,11 @@ const HomeHeader = () => {
       {
         openModal && (
         <Modal>
-            <div className="modal">
-              <div className="mobile__header">
-                <Header routes={routes} />
-              </div>
+          <div className="modal">
+            <div className="mobile__header">
+              <Header routes={routes} />
+              {openModal && <button onClick={handleModal} className="close__mobile"> <img src="images/close.svg" alt="" /> </button> }
+            </div>
           </div>
         </Modal>
         )

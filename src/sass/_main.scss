@@ -59,6 +59,30 @@ html{
   }
 }
 
+@mixin atLarge1200 {
+  @media (max-width: 75em) {//1200px
+    @content;
+  }
+}
+
+@mixin atLarge1300 {
+  @media (max-width: 81.5em) {//1300px
+    @content;
+  }
+}
+
+@mixin atLarge1400 {
+  @media (max-width: 87.5em) {//1400px
+    @content;
+  }
+}
+
+@mixin atLarge1512 {
+  @media (max-width: 94.5em) {//1512px
+    @content;
+  }
+}
+
 button{
   outline: none;
   border: none;

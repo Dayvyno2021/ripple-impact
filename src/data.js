@@ -26,3 +26,24 @@ export const walletDetails = [
   {label: 'Pay Compliances', logo:'pay', url:'#'},
   {label: 'Quick Loan', logo:'loan', url:'#'},
 ]
+
+export const formInputs = [
+  { type: 'text', placeholder: 'First Name', name: 'firstName'},
+  { type: 'text', placeholder: 'Last Name', name: 'lastName'},
+  { type: 'email', placeholder: 'Email', name: 'email'},
+  { type: 'text', placeholder: 'Job Title', name: 'jobTitle'},
+  { type: 'text', placeholder: 'Company Size', name: 'companySize'},
+]
+
+export const socialMedias = [
+  {label: 'instagram', url: '#'},
+  {label: 'twitter', url: '#'},
+  {label: 'linkedin', url: '#'},
+  {label: 'fb', url: '#'},
+]
+
+export const footerLinks = [
+  {header: 'Product', links:['Individual', 'Businesses', 'Request Demo', 'Pricing']},
+  {header: 'Legal', links:['Privacy Policy', 'Terms of Service']},
+  {header: 'Resources', links:['FAQ', 'Blog', 'Careers', 'Customer Stories']}
+]

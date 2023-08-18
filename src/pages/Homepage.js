@@ -1,16 +1,26 @@
 import * as React from 'react';
 import HomeHeader from '../components/HomeHeader';
 import { Link } from 'react-router-dom';
-import { dashboardComponents, supportAndSettings, walletDetails } from '../data';
+import { dashboardComponents, footerLinks, formInputs, socialMedias, supportAndSettings, walletDetails } from '../data';
 import DownloadEazypayApp from '../components/DownloadEazypayApp';
 
 const Homepage = () => {
 
+  //Variable to handle the slide animation of the middle slide when the third slide is hovered.
   const [slide2, setSlide2] = React.useState(null);
 
+  /**
+   * @returns void
+   * Sets slide2 to true when the third slide is onMouseOver
+   */
   const activateSlide2 = () => {
     setSlide2(true);
   }
+
+    /**
+   * @returns void
+   * Sets slide2 to false when the third slide is onMouseLeave
+   */
   const deactivateSlide2 = () => {
     setSlide2(false);
   }
@@ -237,6 +247,87 @@ const Homepage = () => {
                 </div>
                 <div className="person__salary">
                   <h3 className="sub__header"> N150,600.78 </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="eazipay-demo">
+          <img src="images/green-dots.png" alt="" className="eazipay-demo__green-dots" />
+          <div className='eazipay-demo__details'>
+            <div className="eazipay-demo__details__frame-1">
+              <h1 className="main__header">Get an Exclusive <br/> Demo of Eazipay</h1>
+              <p>Our greatest priority is to put you and your business first. Let’s show you how we can help.</p>
+            </div>
+            <div className="eazipay-demo__details__frame-2">
+              <div className="eazidemo-demo__details__frame-2__header">
+                <h1 className="sub__header-l">First things first</h1>
+                <p>We want to serve you better. Tell us a bit about yourself or company</p>
+              </div>
+              <div className="eazipay-demo__details__frame-2__tab">
+                <button className="contact__btn individual">Individual</button>
+                <button className="contact__btn company">Company</button>
+              </div>
+              <form action="" className="eazipay-demo__details__contact">
+                <div className="eazipay-demo__details__contact--inputs form__control">
+                  {
+                    formInputs?.map((formInput) => (
+                      <input key={formInput.placeholder}
+                        className="contact__input form__input"
+                        type={formInput.type}
+                        placeholder={formInput.placeholder}
+                        name={formInput.name}
+                      />
+                    ))
+                  }
+                </div>
+                <button className="form__submit">Request Demo</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <div className="footer__company">
+            <Link to={'/'}>
+              <img src="images/logo.png" alt="" />
+            </Link>
+            <div className="footer__company__copyright">
+              <p>Copyright © 2023 Eazipay.</p>
+              <p>All rights reserved</p>
+            </div>
+            <div className="footer__company__social-medias">
+              {
+                socialMedias?.map(social => (
+                  <button className="social__mdeia-image" key={social.label}>
+                    <img src={`images/${social.label}.png`} alt="" />
+                  </button>
+                ))
+              }
+            </div>
+          </div>
+          <div className="footer__links">
+            {
+              footerLinks?.map((link, i) => (
+                <div className="footer__links__frame" key={link.header}>
+                  <h1 className="footer__links__frame--header sub__header-1"> {link.header} </h1>
+                  <div className="footer__links__frame--links">
+                    {
+                      link.links.map((sublink, j) => (
+                        <button className="footer__sub-link" key={sublink} >{sublink}</button>
+                      ))
+                    }
+                  </div>
+                </div>
+              ))
+            }
+            <div className="footer__links__frame">
+            <h1 className="footer__links__frame sub__header-1"> Contact Us </h1>
+              <div className="footer__links__frame--links contact__us">
+                <button className="footer__sub-link" > eazipay@gmail.com </button>
+                <button className="footer__sub-link" >+234 816 878 9518 </button>
+                <div className="footer__send-email">
+                  <input type="email" className="email__input form__input" />
+                  <button className="email__send"><img src="/images/send.png" alt="" /></button>
                 </div>
               </div>
             </div>
