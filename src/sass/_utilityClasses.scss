@@ -1,5 +1,7 @@
 .container{
   max-width: 151.2rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn--close{
@@ -75,4 +77,31 @@
   &:hover{
     background-color: darken($color: $color-primary, $amount: 5);
   }
+}
+
+.main__header{
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $color-primary;
+}
+
+.paragraph{
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: $color-matt-black;
+}
+
+.sub__header{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.1645965576171875px;
+  text-align: center;
+  color: $color-matt-black;
 }
