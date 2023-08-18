@@ -996,6 +996,10 @@
     justify-content: center;
     align-items: center;
 
+    @include atMedium{
+      height: fit-content;
+    }
+
     &>img{
       display: block;
       position: absolute;
@@ -1011,6 +1015,16 @@
       display: flex;
       justify-content: space-between;
 
+      @include atLarge{
+        width: 920px;
+      }
+
+      @include atMedium{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+      }
+
       &-1{
         width: 552px ;
         height: 346px ;
@@ -1020,12 +1034,18 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include atMedium{
+          margin-bottom: 6rem;
+          justify-content: center;
+        }
+
         &>h1{
           color: $color-matt-black;
-          // display: flex;
-          // justify-content: flex-start;
-          // box-decoration-break: clone;
           text-align: left;
+
+          @include atMedium{
+            text-align: center;
+          }
 
           &>span{
             color: $color-red;
@@ -1037,12 +1057,14 @@
       &-2{
         width: 480px ;
         height: 514.6871337890625px ;
-        // background-color: orangered;
-        // background-image: url('../../public/images/person.png'), url('../../public/images/person-bgd.png');
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
         background-color: $color-pink;
+
+        @include atSmall{
+          width: 330px;
+        }
 
         &::before{
           content: "";
