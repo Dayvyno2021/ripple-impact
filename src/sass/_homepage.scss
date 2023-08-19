@@ -195,9 +195,9 @@
       }
 
       @include atSmall{
-        transform: scale(.3);
-        height: 30rem;
-        margin-top: -10rem;
+        transform: scale(.35);
+        height: 38rem;
+        margin-top: -9rem;
       }
       
       .welcome__container{
@@ -945,9 +945,19 @@
         height: 682px ;
         border-radius: 63.26686096191406px;
         position: relative;
+        transform: scale(1);
 
         @include atMedium{
           margin: 5rem 0;
+        }
+
+        @include atSmallMedium{
+          transform: scale(0.7);
+          margin-bottom: -6rem;
+          margin-top: -5rem;
+        }
+        @include atSmall{
+          transform: scale(0.65);
         }
 
         &>img{
