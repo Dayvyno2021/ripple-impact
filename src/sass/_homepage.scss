@@ -976,10 +976,18 @@
       &--direction{
         width: 421px ;
         height: 608px;
-        // background-color: red;
-        background-image: url("../../public/images/direction.png");
-        background-size: cover;
-        background-repeat: no-repeat;
+        
+        @include atSmall{
+          width: 100%;
+          padding: 0 3rem;
+        }
+       
+        &>img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
 
       }
     }

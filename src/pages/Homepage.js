@@ -227,7 +227,9 @@ const Homepage = () => {
               <div className="how-it-works__analogy--circles-2 circles"></div>
               <div className="how-it-works__analogy--circles-3 circles"></div>
             </div>
-            <div className="how-it-works__analogy--direction"></div>
+            <div className="how-it-works__analogy--direction">
+              <img src="images/direction.png" alt="" />
+            </div>
           </div>
         </div>
 
