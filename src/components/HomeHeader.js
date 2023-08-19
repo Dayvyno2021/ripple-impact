@@ -23,7 +23,7 @@ const HomeHeader = () => {
       <nav className="header__nav">
         <Header routes={routes} />
       </nav>
-      <div className="header__mobile">
+      <div className="header__mobile" >
         <button onClick={navigateHome}>
           <img src={'images/logo.png'} alt="" />
         </button>
