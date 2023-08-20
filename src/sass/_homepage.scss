@@ -12,49 +12,17 @@
     max-width: 151.2rem;
     height: 86.541rem;
     position: relative;
-    //overflow: hidden; //hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-    // background-color: red;
     display: block;
+
+    background-image: url('../../public/images/section1-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include atLarge{
       height: auto;//////////////////////
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    &__gradient-1{
-      position: absolute;
-      width: 328.51873779296875px ;
-      height: 241.4213104248047px ;
-      top: 2px ;
-      left: 2px ;
-      @include rainbowGradient;
-    }
-
-    &__gradient-2{
-      position: absolute;
-      width: 500.9992370605469px ;
-      height: 368.1740417480469px ;
-      top: 497.23486328125px ;
-      left: 1011px ;
-      @include rainbowGradient;
-    }
-
-    &__gradient-3{
-      position: absolute;
-      width: 500.9992370605469px ;
-      height: 368.1740417480469px ;
-      top: 450.991943359375px ;
-      @include rainbowGradient;
-    }
-
-    &__gradient-4{
-      position: absolute;
-      width: 379.7622375488281px ;
-      height: 279.07904052734375px ;
-      left: 1130.1171875px ;
-      @include rainbowGradient;
     }
     
     &__run{

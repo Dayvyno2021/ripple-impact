@@ -23,8 +23,3 @@
     box-shadow: 0 0 5px 2px rgba($color: $color-primary, $alpha: 0.2);
   }
 }
-
-@mixin rainbowGradient{
-  background-image: radial-gradient(closest-corner at 60% 55%, rgba($color: #001AFF, $alpha: 0.2), rgba($color: #00FF19, $alpha: 0.2), rgba($color: #FF0500, $alpha: 0.2), rgba($color: #FFF, $alpha: .2), rgba($color: #FFF, $alpha: .2) );
-  opacity: 0.2;
-}
