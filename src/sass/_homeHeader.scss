@@ -154,22 +154,33 @@
   }
 
 }
+
+.initial__header{
+    // position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    opacity: 0;
+      visibility: hidden;
+      top: -50rem;
+      height: 0;
+      animation: modalSlideOut .3s;
+}
+
 .mobile__header{
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
   visibility: hidden;
-  height: 0;
   width: 100%;
   top: -20rem;
-  transition: all 5s;
+  animation: modalSlideIn .5s;
 
   .close__mobile{
     position: absolute;
     right: 50px;
-    top: 30px;
+    top: 27px;
     background-color: transparent;
     &>img{
       width: 3rem;
@@ -182,7 +193,6 @@
     visibility: visible;
     top: 0;
     height: 100%;
-    transition: all 5s;
 
     padding: 2rem 1rem;
     padding-top: 10rem;

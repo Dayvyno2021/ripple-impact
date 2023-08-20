@@ -1,0 +1,29 @@
+@keyframes modalSlideIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    top: -50rem;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+}
+
+@keyframes modalSlideOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    top: -50rem;
+  }
+}
