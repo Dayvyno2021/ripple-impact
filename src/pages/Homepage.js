@@ -33,11 +33,6 @@ const Homepage = () => {
         <HomeHeader />
         <section className="payroll">
 
-          <div className="payroll__gradient-1"></div>
-          <div className="payroll__gradient-2"></div>
-          <div className="payroll__gradient-3"></div>
-          <div className="payroll__gradient-4"></div>
-
           <div className="payroll__run">
             <div className="payroll__run__frame">
               <div className="payroll__run__frame--text">
