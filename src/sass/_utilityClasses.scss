@@ -86,6 +86,10 @@
   letter-spacing: 0em;
   text-align: center;
   color: $color-primary;
+
+  @include atSmall{
+    font-size: 4rem;
+  }
 }
 
 .paragraph{

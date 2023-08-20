@@ -19,7 +19,12 @@ code {
 html{
   font-size: 62.5%; //1rem=10px
   box-sizing: border-box;
+
+  // @include atSmall{
+  //   // font-size: 55%;
+  // }
 }
+
 
 //Controls the modals css
 #modal-root {

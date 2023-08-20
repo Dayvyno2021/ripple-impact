@@ -31,7 +31,7 @@ const Homepage = () => {
     <div className='container'>
       <div className="homepage">
         <HomeHeader />
-        <div className="payroll">
+        <section className="payroll">
 
           <div className="payroll__gradient-1"></div>
           <div className="payroll__gradient-2"></div>
@@ -102,7 +102,7 @@ const Homepage = () => {
                                 <div className="component__vertical"> </div>
                                 <img src={`images/${component.logo}`} alt="" className="component__logo" />
                                 <div className="component__label"> {component.label} </div>
-                                <div className="component__dropdown"> {component.dropdown? (<span class="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
+                                <div className="component__dropdown"> {component.dropdown? (<span className="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
                               </div>
                             ))
                           }
@@ -115,7 +115,7 @@ const Homepage = () => {
                                 <div className="component__vertical"> </div>
                                 <img src={`images/${component.logo}`} alt="" className="component__logo" />
                                 <div className="component__label"> {component.label} </div>
-                                <div className="component__dropdown"> {component.dropdown? (<span class="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
+                                <div className="component__dropdown"> {component.dropdown? (<span className="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
                               </div>
                             ))
                           }
@@ -179,9 +179,9 @@ const Homepage = () => {
               <div className="welcome__radial"></div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="indi-and-biz">
+        <section className="indi-and-biz">
           <div className="indi-and-biz__frame">
             <div className="indi-and-biz__frame-text">
               <h1 className='main__header'>For Individuals and Businesses</h1>
@@ -214,8 +214,8 @@ const Homepage = () => {
               We are happy to answer your queries. Please, reach us at <br/> <span>hello@myeazipay.com</span> and expect our response shortly after.
             </p>
           </div>
-        </div>
-        <div className="how-it-works">
+        </section>
+        <section className="how-it-works">
           <div className="how-it-works__header">
             <h1 className="main__header">How Eazipay Works</h1>
             <p>Get started in 3 simple steps.</p>
@@ -231,9 +231,9 @@ const Homepage = () => {
               <img src="images/direction.png" alt="" />
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="salary__payment">
+        <section className="salary__payment">
           <img src="images/pink-dots.png" alt="" />
           <div className="salary__payment__details">
             <div className="salary__payment__details-1">
@@ -254,8 +254,8 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="eazipay-demo">
+        </section>
+        <section className="eazipay-demo">
           <img src="images/green-dots.png" alt="" className="eazipay-demo__green-dots" />
           <div className='eazipay-demo__details'>
             <div className="eazipay-demo__details__frame-1">
@@ -288,7 +288,7 @@ const Homepage = () => {
               </form>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </div>

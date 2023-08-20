@@ -65,6 +65,7 @@
       left: 19.2rem ;
       display: flex;
       flex-direction: column;
+      transform: scale(1);
 
       @include atLarge1400{/////////////////////
         left: 11.25rem;
@@ -85,6 +86,10 @@
         width: fit-content;
         height: fit-content;
         padding: 2rem;
+      }
+
+      @include atSmall{
+        scale: .9;
       }
 
       &__frame{
@@ -779,6 +784,16 @@
       padding: 16.85rem 3rem;
     }
 
+    @include atSmallMedium{
+      padding: 6rem 3rem 12rem 3rem;
+      margin-top: 5rem;
+    }
+
+    @include atSmall{
+      padding: 6rem 3rem 12rem 3rem;
+      margin-top: 5rem;
+    }
+
     &__frame{
       width: 1128px;
       height: 600px ;
@@ -842,6 +857,9 @@
             position: static;//////////////
             width: 100%;
             margin-bottom: 5rem;
+          }
+
+          @include atSmall{
             height: 400px;
           }
 
@@ -859,6 +877,11 @@
             letter-spacing: 0em;
             text-align: left;
             color: $color-w;
+
+            @include atMedium{
+              text-align: center;
+              margin: 0 auto;
+            }
           }
 
           &>p{
@@ -1026,7 +1049,7 @@
     max-width: 100%;
     height: 795.572021484375px ;
 
-    background-image: url('../../public/images/salary-payment.png');
+    background-image: url('../../public/images/patterns.png'), url('../../public/images/salary-payment.png');
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1035,6 +1058,11 @@
 
     @include atMedium{
       height: fit-content;
+      padding-bottom: 10rem;
+    }
+
+    @include atSmallMedium{
+      padding-bottom: 3rem;
     }
 
     &>img{
@@ -1070,10 +1098,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transform: scale(1);
 
         @include atMedium{
           margin-bottom: 6rem;
           justify-content: center;
+        }
+
+        @include atSmall{
+          margin-bottom: 0;
+          transform: scale(0.9);
         }
 
         &>h1{
@@ -1098,9 +1132,19 @@
         background-repeat: no-repeat;
         position: relative;
         background-color: $color-pink;
+        transform: scale(1);
+
+        @include atSmallMedium{
+          // width: 330px;
+          transform: scale(0.8);////////////////
+          margin-bottom: -2rem;
+        }
 
         @include atSmall{
-          width: 330px;
+          // width: 330px;
+          transform: scale(0.58);
+          margin-bottom: -8rem;
+          margin-top: -3rem;
         }
 
         &::before{
