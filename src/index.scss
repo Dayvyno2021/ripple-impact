@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Aeonik";
+  src: local("Aeonik"),
+    url("./fonts/Aeonik/Aeonik-Regular.otf") format("truetype");
+  font-weight: bold;
+}
+
 @import "./sass/variable";
 @import "./sass/main";
 @import "./sass/mixins";

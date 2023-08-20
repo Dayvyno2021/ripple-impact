@@ -102,7 +102,7 @@ const Homepage = () => {
                                 <div className="component__vertical"> </div>
                                 <img src={`images/${component.logo}`} alt="" className="component__logo" />
                                 <div className="component__label"> {component.label} </div>
-                                <div className="component__dropdown"> {component.dropdown? (<span>^</span>) : ''} </div>
+                                <div className="component__dropdown"> {component.dropdown? (<span class="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
                               </div>
                             ))
                           }
@@ -115,7 +115,7 @@ const Homepage = () => {
                                 <div className="component__vertical"> </div>
                                 <img src={`images/${component.logo}`} alt="" className="component__logo" />
                                 <div className="component__label"> {component.label} </div>
-                                <div className="component__dropdown"> {component.dropdown? (<span>^</span>) : ''} </div>
+                                <div className="component__dropdown"> {component.dropdown? (<span class="material-symbols-outlined" style={{fontSize: "14px"}} >expand_more</span>) : ''} </div>
                               </div>
                             ))
                           }
