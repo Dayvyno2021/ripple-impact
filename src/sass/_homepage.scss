@@ -723,14 +723,12 @@
           height: 67.07rem ;
           top: .13rem ;
           left: 1.16rem;
-          background: radial-gradient(53.82% 81.51% at 50% 50%, #227565 0%, #072B24 100%);
+          background-image:url('../../public/images/circle-pattern.png'), radial-gradient(53.82% 81.51% at 50% 50%, #227565 0%, #072B24 100%);
           /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
           border-radius: 100%;
         }
       }
-
     }
-
   }
 
   .indi-and-biz{
