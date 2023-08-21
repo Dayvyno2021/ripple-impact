@@ -594,7 +594,7 @@
                         // padding: 1.49rem 1.54rem ;
                         border-radius: 1.15rem ;
                         border: 0.48px ;
-                        background-image: linear-gradient(0deg, rgba($color: $color-light-grey, $alpha: .1), rgba($color: $color-light-grey, $alpha: .02)), linear-gradient(0deg, $color-primary, $color-primary);
+                        background-image: url('../../public/images/price-pattern.png'), linear-gradient(0deg, $color-primary, $color-primary);
                         border: 0.48px solid $color-light-grey;
                         box-shadow: 0px 9.630227088928223px 23.1125431060791px 0px #AAAAAA4A;
                         // radial-gradient(at top left, transparent 67%, #fff 67.5%)
@@ -741,9 +741,9 @@
     align-items: center;
     align-content: center;
 
-    background-image: url('../../public/images/slider-background2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image:url('../../public/images/individual-pattern.png'), url('../../public/images/slider-background2.png'), url('../../public/images/section1-bg.png');
+    // background-size: cover;
+    // background-repeat: no-repeat;
     width: 100%;
 
     @include atLarge1512{
