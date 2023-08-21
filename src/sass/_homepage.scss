@@ -144,14 +144,14 @@
       transform: scale(1);
 
       @include atLarge1400{
-        left: 70rem;////////////////////////////
+        left: 70rem;
       }
       
       @include atLarge1300{
-        left: 65rem;////////////////////////////
+        left: 65rem;
       }
       @include atLarge1200{
-        left: 60rem;////////////////////////////
+        left: 60rem;
       }
       @include atLarge{
         position: static;
@@ -1388,7 +1388,11 @@
 
 //Handle individual and business animations
 .indi-and-biz__frame-slide-1:hover + .indi-and-biz__frame-slide-2{
-  left: 520px
+  left: 505px
+}
+
+.indi-and-biz__frame-slide-2:hover + .indi-and-biz__frame-slide-3{
+  left: 596px
 }
 
 .indi-and-biz__frame-slide-2:hover{
