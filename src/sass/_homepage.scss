@@ -18,8 +18,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+
     @include atLarge{
-      height: auto;//////////////////////
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -994,19 +995,154 @@
       &--direction{
         width: 421px ;
         height: 608px;
-
+        position: relative;
+        transform: scale(1);
+        
         @include atSmall{
-          width: 100%;
-          padding: 0 3rem;
-        }
-       
-        &>img{
-          display: block;
-          width: 100%;
-          height: 100%;
+          transform: scale(0.8);
         }
 
+        .direction__sub-container{
+          position: absolute;
+          width: 360px ;
+          height: 608px;
+          left: 52.40234375px;
+          // border: 1px solid green;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
 
+          .text__container{
+            position: relative;
+            width: 360px;
+            // border: 1px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+
+          &-frame-1{
+            height: 144px;
+          }
+          &-frame-2, &-frame-3{
+            height: 168px;
+          }
+        }
+
+        .direction__square-box{
+          position: absolute;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 48;
+          font-size: 36px;
+          font-weight: 700;
+          border-radius: 16px ;
+          width: 64px ;
+          height: 64px ;
+        }
+
+        .direction-1{
+          top: 0;
+          background-color: $color-primary;
+          color: $color-w;
+          box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+        }
+        .direction-2{
+          top: 0;
+          background-color: $color-grey-light-3;
+          color: $color-primary;
+        }
+        .direction-3{
+          top: 0;
+          background-color: $color-grey-light-3;
+          color: $color-primary;
+        }
+
+        .direction__rectangle{
+          position: absolute;
+          border-top: 4px solid $color-light-green;
+          border-bottom: 4px solid $color-light-green;
+
+          .direction__container{
+              position: relative;
+              width: 100%;
+              height: 100%;
+          }
+
+          .tip-circle{
+            position: absolute;
+            background-color: $color-light-green;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+          }
+
+        }
+
+        .direction__rectangle-1{
+
+          &::before{
+            content: '';
+            position: absolute;
+
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            height: 209px;
+            border-top: 4px solid $color-primary;
+            // border-radius: 16px 0 0 16px;
+            animation-name: direction-1;
+            animation-duration: 5s;
+            // width: 36px;
+          }
+
+          // &::after{
+          //   content: '';
+          //   top: 4px;
+          //   left : -4px;
+          //   height: 201px;//;
+          //   position: absolute;
+          //   width: 4px;
+          //   background-color: red;
+          // }
+
+          top: 32px;
+          left: 0;
+          width: 36px ;
+          height: 209px ;
+          border-left: 4px solid $color-light-green;
+          border-radius: 16px 0 0 16px ;
+
+          &__inner-container{
+
+            &__circle{
+              right: -1rem;
+              bottom: -1rem;
+            }
+          }
+
+        }
+
+        .direction__rectangle-2{
+          width: 288px ;
+          height: 232px ;
+          top: 240px ;
+          right: 0px ;
+          border-right: 4px $color-light-green solid;
+          border-radius: 0 16px 16px 0;
+          // angle: -180 deg;
+
+          &__inner-container {
+          
+            &__circle {
+              left: -1rem;
+              bottom: -1rem;
+            }
+          }
+
+        }
       }
     }
   }

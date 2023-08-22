@@ -223,7 +223,39 @@ const Homepage = () => {
               <div className="how-it-works__analogy--circles-3 circles"></div>
             </div>
             <div className="how-it-works__analogy--direction">
-              <img src="images/direction.png" alt="" />
+              <div className="direction__sub-container">
+                <div className="direction__sub-container-frame-1 text__container">
+                  <div className="direction-1 direction__square-box">1</div>
+                  <Link to={'#'} className="direction__text">
+                    <h2 className="sub__header-2">Create your free account</h2>
+                    <p className='paragraph-2'>Click here to set up your Eazipay account.</p>
+                  </Link>
+                </div>
+                <div className="direction__sub-container-frame-2 text__container">
+                  <div className="direction-2 direction__square-box">2</div>
+                  <Link to={'#'} className="direction__text">
+                    <h2 className="sub__header-2">Add Employee Data</h2>
+                    <p className='paragraph-2'>Your employee information is 100% safe and secure.</p>
+                  </Link>
+                </div>
+                <div className="direction__sub-container-frame-3 text__container">
+                  <div className="direction-3 direction__square-box">3</div>
+                  <Link to={'#'} className="direction__text">
+                    <h2 className="sub__header-2">Prepare your Transaction</h2>
+                    <p className='paragraph-2'>Run payroll: Bulk Salaries and Compliance are done at once!</p>
+                  </Link>
+                </div>
+              </div>
+              <div className="direction__rectangle-1 direction__rectangle">
+                <div className="direction__rectangle-1__inner-container direction__container">
+                  <div className="direction__rectangle-1__inner-container__circle tip-circle"></div>
+                </div>
+              </div>
+              <div className="direction__rectangle-2 direction__rectangle">
+                <div className="direction__rectangle-2__inner-container direction__container">
+                  <div className="direction__rectangle-2__inner-container__circle tip-circle"></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

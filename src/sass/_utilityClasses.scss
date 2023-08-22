@@ -100,6 +100,16 @@
   color: $color-matt-black;
 }
 
+.paragraph-2{
+  //styleName: Body/Normal/Regular;
+    font-family: "Aeonik";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 .sub__header{
   font-family: sans-serif;
   font-size: 16px;
@@ -120,6 +130,18 @@
   letter-spacing: 0em;
   text-align: center;
 
+}
+
+.sub__header-2{
+  //styleName: Caption/Sub Header/H4/Bold;
+    font-family: "Aeonik";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: $color-matt-black;
+    margin-bottom: 16px;
 }
 
 .form__input {
