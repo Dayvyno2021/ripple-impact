@@ -1048,16 +1048,28 @@
           background-color: $color-primary;
           color: $color-w;
           box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+          animation: direction-7 .3s linear 12s 1 normal forwards;
         }
         .direction-2{
           top: 0;
           background-color: $color-grey-light-3;
           color: $color-primary;
+
+          animation-name: direction-8, direction-7;
+          animation-timing-function: linear, linear;
+          animation-duration: .3s, .3s;
+          animation-delay: 12s, 23.3s;
+          animation-fill-mode: forwards, forwards;
+
+          // animation: direction-8 .3s linear 12s 1 normal forwards;
+          // animation: direction-7 .3s linear 23.3s 1 normal forwards;
         }
         .direction-3{
           top: 0;
           background-color: $color-grey-light-3;
           color: $color-primary;
+
+          animation: direction-8 .3s linear 23.3s 1 normal forwards;
         }
 
         .direction__rectangle{
@@ -1082,44 +1094,96 @@
         }
 
         .direction__rectangle-1{
+          top: 32px;
+          left: 0;
+          width: 36px;
+          height: 209px;
+          border-left: 4px solid $color-light-green;
+          border-radius: 16px 0 0 16px;
 
           &::before{
             content: '';
             position: absolute;
-
-            top: 50%;
-            transform: translateY(-50%);
+            top: -4px;
             right: 0;
-            height: 209px;
+            width: 0px;
             border-top: 4px solid $color-primary;
-            // border-radius: 16px 0 0 16px;
-            animation-name: direction-1;
-            animation-duration: 5s;
+            border-top-left-radius: 16px ;
+            animation-name: direction-1, direction-2;
+            animation-duration: 2s, 2s;
+            animation-delay: 0s, 2s;
+            animation-timing-function: linear, linear;
+            animation-fill-mode: forwards, forwards;
+
             // width: 36px;
+            // height: 36px;
+            // border-left: 4px solid $color-primary;
+
           }
 
-          // &::after{
-          //   content: '';
-          //   top: 4px;
-          //   left : -4px;
-          //   height: 201px;//;
-          //   position: absolute;
-          //   width: 4px;
-          //   background-color: red;
-          // }
+          &::after{
+            content: '';
+            position: absolute;
+            top: 32px;
+            left : -4px;
+            height: 0px;//;
+            width: 4px;
+            background-color: $color-primary;
+            animation: direction-3;
+            animation-duration: 2s;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
 
-          top: 32px;
-          left: 0;
-          width: 36px ;
-          height: 209px ;
-          border-left: 4px solid $color-light-green;
-          border-radius: 16px 0 0 16px ;
+            // height: 137px;
+          }
+
+          .rectangle-1__last-square{
+            top: 169px;
+            //
+            position: absolute;
+            left: -4px;
+            width: 0px;
+            border-left: 4px solid $color-primary;
+            
+            border-bottom-left-radius: 16px;
+            //
+            animation-name: direction-4 , direction-5;
+            animation-delay: 6s, 8s;
+            animation-timing-function: linear, linear;
+            animation-duration: 2s, 2s;
+            animation-fill-mode: forwards, forwards;
+
+            // width: 36px;
+            // height: 36px;
+            // border-left: 4px solid red;
+            
+          }
 
           &__inner-container{
 
             &__circle{
               right: -1rem;
               bottom: -1rem;
+              z-index: 2;
+
+              &::before{
+                content: '';
+                position: absolute;
+                // background-color: red;
+                background-color: $color-primary;
+                left: 0rem;
+                top: 0rem;
+                width: 0rem;
+                height: 2rem;
+                z-index: 4;
+                border-radius: 50%;
+                animation-name: direction-6;
+                animation-duration:  2s;
+                animation-delay: 10s ;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+              }
             }
           }
 
@@ -1134,11 +1198,67 @@
           border-radius: 0 16px 16px 0;
           // angle: -180 deg;
 
+          .direction__rectangle-2__container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &::before{
+              position: absolute;
+              content: '';
+              width: 0px;
+              height: 0px;
+              left: -4px;
+              top: -4px;
+              border-top-right-radius: 16px;
+              border-top: 4px solid $color-primary;
+              // border-right: 4px solid $color-primary;
+              animation-name: direction-9, direction-10;
+              animation-duration: 4s, 3s;
+              animation-delay: 12.3s, 16.3s;
+              animation-timing-function: linear, linear;
+              animation-fill-mode: forwards, forwards;
+            }
+            &::after{
+              position: absolute;
+              content: '';
+              width: 0;
+              height: 100%;
+              right: -4px;
+              bottom: -4px;
+              border-bottom-right-radius: 16px;
+              border-bottom: 4px solid $color-primary;
+              // border-right: 4px solid $color-primary;
+              animation-name: direction-11;
+              animation-duration: 3s;
+              animation-timing-function: linear;
+              animation-delay: 19.3s;
+              animation-fill-mode: forwards;
+            }
+          }
+
           &__inner-container {
           
             &__circle {
               left: -1rem;
               bottom: -1rem;
+              z-index: 5;
+
+              &::before{
+                content: '';
+                width: 0;
+                height: 2rem;
+                background-color: $color-primary;
+                position: absolute;
+                border-radius: 50%;
+                right: 0;
+                bottom: 0rem;
+                animation-name: direction-12;
+                animation-duration: 1s;
+                animation-delay: 22.3s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+              }
             }
           }
 

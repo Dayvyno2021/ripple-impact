@@ -249,11 +249,13 @@ const Homepage = () => {
               <div className="direction__rectangle-1 direction__rectangle">
                 <div className="direction__rectangle-1__inner-container direction__container">
                   <div className="direction__rectangle-1__inner-container__circle tip-circle"></div>
+                  <div className="rectangle-1__last-square"></div>
                 </div>
               </div>
               <div className="direction__rectangle-2 direction__rectangle">
-                <div className="direction__rectangle-2__inner-container direction__container">
+                <div className="direction__rectangle-2__container">
                   <div className="direction__rectangle-2__inner-container__circle tip-circle"></div>
+                  <div className="direction__rectangle-2__inner-container direction__container"></div>
                 </div>
               </div>
             </div>

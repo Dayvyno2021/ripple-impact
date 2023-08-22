@@ -28,37 +28,145 @@
   }
 }
 
-// @keyframes direction-1 {
-//   0%{
-//     width: 0;
-//   }
-//   50%{
-//     width: 36px;
-//   }
-//   100%{
-//     border-top-left-radius: 16px;
-//     width: 36px;
-//   }
-// }
 @keyframes direction-1 {
   0%{
     width: 0;
   }
-  50%{
-    width: 36px;
-  }
+
   100%{
-    border-top-left-radius: 16px;
-    width: 36px;
+    width: 30px;
+    border-top: 4px solid $color-primary;
   }
 }
 
 @keyframes direction-2 {
   0%{
     height: 0;
+    width: 30px;
+    border-top: 4px solid $color-primary;
   }
 
   100%{
-    height: 209px;
+    height: 36px;
+    width: 36px;
+    border-left: 4px solid $color-primary;
+  }
+}
+
+@keyframes direction-3 {
+  0%{
+    height: 0;
+  }
+
+  100%{
+    height: 137px;
+  }
+
+}
+
+@keyframes direction-4 {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 30px;
+    // border-top: 4px solid $color-primary;
+  }
+}
+
+@keyframes direction-5 {
+  0%{
+    width: 0px;
+    height: 30px;
+  }
+
+  100%{
+    width: 36px;
+    height: 36px;
+    border-bottom: 4px solid $color-primary;
+  }
+}
+
+@keyframes direction-6{
+  0%{
+    width: 0;
+  }
+
+  25%{
+    width: .5rem;
+  }
+  50%{
+    width: 1.5rem;
+  }
+  100%{
+    width: 2rem;
+  }
+}
+
+@keyframes direction-7 {
+  0%{
+    top: 0;
+    background-color: $color-primary;
+    color: $color-w;
+    box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+  }
+  100%{
+    top: 0;
+    background-color: $color-grey-light-3;
+    color: $color-primary;
+  }
+}
+
+@keyframes direction-8 {
+  0%{
+    top: 0;
+    background-color: $color-grey-light-3;
+    color: $color-primary;
+  }
+  100%{
+    top: 0;
+    background-color: $color-primary;
+    color: $color-w;
+    box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+  }
+}
+
+@keyframes direction-9 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 292px;
+  }
+}
+
+@keyframes direction-10 {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+    border-right: 4px solid $color-primary;
+  }
+}
+
+@keyframes direction-11 {
+  0%{
+    width: 0;
+    height: 5rem;
+    border-right: 4px solid $color-primary;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+@keyframes direction-12 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 2rem;
   }
 }
