@@ -217,7 +217,7 @@ const Homepage = () => {
           </div>
           <div className="how-it-works__analogy">
             <div className="how-it-works__analogy--circles">
-              <img src="images/onboard2.png" alt="" />
+              <img src="images/phone.gif" alt="" />
               <div className="how-it-works__analogy--circles-1 circles"></div>
               <div className="how-it-works__analogy--circles-2 circles"></div>
               <div className="how-it-works__analogy--circles-3 circles"></div>
