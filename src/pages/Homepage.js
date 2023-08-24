@@ -236,7 +236,7 @@ const Homepage = () => {
             <div className="how-it-works__analogy--direction">
               <div className="direction__sub-container">
                 <div className="direction__sub-container-frame-1 text__container">
-                  <div className="direction-1 direction__square-box"> <div className={flowStart? "new-direction-1" : ""}>1</div> </div>
+                  <div className="direction-1 direction__square-box"> {flowStart && 1} <div className={flowStart? "new-direction-1" : ""}>1</div> </div>
                   <Link to={'#'} className="direction__text">
                     <h2 className="sub__header-2">Create your free account</h2>
                     <p className='paragraph-2'>Click here to set up your Eazipay account.</p>
