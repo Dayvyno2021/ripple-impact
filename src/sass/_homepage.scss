@@ -1008,7 +1008,6 @@
           width: 360px ;
           height: 608px;
           left: 52.40234375px;
-          // border: 1px solid green;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -1016,7 +1015,6 @@
           .text__container{
             position: relative;
             width: 360px;
-            // border: 1px solid green;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -1030,7 +1028,7 @@
           }
         }
 
-        .direction__square-box{
+        .direction__square-box, .new-direction-1, .new-direction-2, .new-direction-3{
           position: absolute;
           left: 0;
           display: flex;
@@ -1046,30 +1044,41 @@
 
         .direction-1{
           top: 0;
+          color: $color-primary;
+          background-color: $color-grey-light-3;
+        }
+        
+        .new-direction-1{
+          top: 0;
           background-color: $color-primary;
           color: $color-w;
           box-shadow: 0px 20px 48px 0px #AAAAAA4A;
+
           animation: direction-7 .3s linear 12s 1 normal forwards;
         }
+
         .direction-2{
           top: 0;
           background-color: $color-grey-light-3;
           color: $color-primary;
+        }
 
+        .new-direction-2{
           animation-name: direction-8, direction-7;
           animation-timing-function: linear, linear;
           animation-duration: .3s, .3s;
           animation-delay: 12s, 23.3s;
           animation-fill-mode: forwards, forwards;
-
-          // animation: direction-8 .3s linear 12s 1 normal forwards;
-          // animation: direction-7 .3s linear 23.3s 1 normal forwards;
         }
+
         .direction-3{
           top: 0;
           background-color: $color-grey-light-3;
           color: $color-primary;
-
+        }
+        
+        .new-direction-3{
+          color: $color-primary;
           animation: direction-8 .3s linear 23.3s 1 normal forwards;
         }
 
@@ -1084,7 +1093,7 @@
               height: 100%;
           }
 
-          .tip-circle{
+          .tip-circle, .new-tip-circle{
             position: absolute;
             background-color: $color-light-green;
             width: 2rem;
@@ -1102,8 +1111,7 @@
           border-left: 4px solid $color-light-green;
           border-radius: 16px 0 0 16px;
 
-          &::before{
-            content: '';
+          .new-direction__rectangle-1{
             position: absolute;
             top: -4px;
             right: 0;
@@ -1116,13 +1124,9 @@
             animation-timing-function: linear, linear;
             animation-fill-mode: forwards, forwards;
 
-            // width: 36px;
-            // height: 36px;
-            // border-left: 4px solid $color-primary;
-
           }
 
-          &::after{
+          .new-direction__rectangle-1::before{
             content: '';
             position: absolute;
             top: 32px;
@@ -1136,28 +1140,20 @@
             animation-timing-function: linear;
             animation-fill-mode: forwards;
 
-            // height: 137px;
           }
 
           .rectangle-1__last-square{
             top: 169px;
-            //
             position: absolute;
             left: -4px;
             width: 0px;
             border-left: 4px solid $color-primary;
-            
             border-bottom-left-radius: 16px;
-            //
             animation-name: direction-4 , direction-5;
             animation-delay: 6s, 8s;
             animation-timing-function: linear, linear;
             animation-duration: 2s, 2s;
             animation-fill-mode: forwards, forwards;
-
-            // width: 36px;
-            // height: 36px;
-            // border-left: 4px solid red;
             
           }
 
@@ -1168,10 +1164,8 @@
               bottom: -1rem;
               z-index: 2;
 
-              &::before{
-                content: '';
+              .new-tip-circle{
                 position: absolute;
-                // background-color: red;
                 background-color: $color-primary;
                 left: 0rem;
                 top: 0rem;
@@ -1197,7 +1191,6 @@
           right: 0px ;
           border-right: 4px $color-light-green solid;
           border-radius: 0 16px 16px 0;
-          // angle: -180 deg;
 
           .direction__rectangle-2__container{
             position: relative;
@@ -1213,7 +1206,6 @@
               top: -4px;
               border-top-right-radius: 16px;
               border-top: 4px solid $color-primary;
-              // border-right: 4px solid $color-primary;
               animation-name: direction-9, direction-10;
               animation-duration: 4s, 3s;
               animation-delay: 12.3s, 16.3s;
@@ -1229,7 +1221,6 @@
               bottom: -4px;
               border-bottom-right-radius: 16px;
               border-bottom: 4px solid $color-primary;
-              // border-right: 4px solid $color-primary;
               animation-name: direction-11;
               animation-duration: 3s;
               animation-timing-function: linear;
@@ -1245,7 +1236,7 @@
               bottom: -1rem;
               z-index: 5;
 
-              &::before{
+              .new-tip-circle-2{
                 content: '';
                 width: 0;
                 height: 2rem;

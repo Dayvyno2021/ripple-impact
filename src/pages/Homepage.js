@@ -10,6 +10,9 @@ const Homepage = () => {
   //Variable to handle the slide animation of the middle slide when the third slide is hovered.
   const [slide2, setSlide2] = React.useState(null);
 
+  //Controls the flow animation
+  const [flowStart, setFlowStart] = React.useState(true);
+
   /**
    * @returns void
    * Sets slide2 to true when the third slide is onMouseOver
@@ -26,6 +29,14 @@ const Homepage = () => {
     setSlide2(false);
   }
 
+  React.useEffect(() => {
+    setFlowStart(true);
+    function runAtInterval() {
+      setInterval(() => setFlowStart(false), 35000);
+    }
+    runAtInterval();
+  }, [flowStart])
+  
 
   return (
     <div className='container'>
@@ -225,21 +236,21 @@ const Homepage = () => {
             <div className="how-it-works__analogy--direction">
               <div className="direction__sub-container">
                 <div className="direction__sub-container-frame-1 text__container">
-                  <div className="direction-1 direction__square-box">1</div>
+                  <div className="direction-1 direction__square-box"> <div className={flowStart? "new-direction-1" : ""}>1</div> </div>
                   <Link to={'#'} className="direction__text">
                     <h2 className="sub__header-2">Create your free account</h2>
                     <p className='paragraph-2'>Click here to set up your Eazipay account.</p>
                   </Link>
                 </div>
                 <div className="direction__sub-container-frame-2 text__container">
-                  <div className="direction-2 direction__square-box">2</div>
+                  <div className="direction-2 direction__square-box"> <div className={flowStart? "new-direction-2" : ""}>2</div> </div>
                   <Link to={'#'} className="direction__text">
                     <h2 className="sub__header-2">Add Employee Data</h2>
                     <p className='paragraph-2'>Your employee information is 100% safe and secure.</p>
                   </Link>
                 </div>
                 <div className="direction__sub-container-frame-3 text__container">
-                  <div className="direction-3 direction__square-box">3</div>
+                  <div className="direction-3 direction__square-box"><div className={flowStart? "new-direction-3" : ""}>3</div></div>
                   <Link to={'#'} className="direction__text">
                     <h2 className="sub__header-2">Prepare your Transaction</h2>
                     <p className='paragraph-2'>Run payroll: Bulk Salaries and Compliance are done at once!</p>
@@ -247,14 +258,15 @@ const Homepage = () => {
                 </div>
               </div>
               <div className="direction__rectangle-1 direction__rectangle">
+                <div className={ flowStart? "new-direction__rectangle-1" : ""}></div>
                 <div className="direction__rectangle-1__inner-container direction__container">
-                  <div className="direction__rectangle-1__inner-container__circle tip-circle"></div>
-                  <div className="rectangle-1__last-square"></div>
+                  <div className="direction__rectangle-1__inner-container__circle tip-circle"> <div className={flowStart? "new-tip-circle" : ""}></div> </div>
+                  <div className={flowStart? "rectangle-1__last-square" : ""}></div>
                 </div>
               </div>
               <div className="direction__rectangle-2 direction__rectangle">
-                <div className="direction__rectangle-2__container">
-                  <div className="direction__rectangle-2__inner-container__circle tip-circle"></div>
+                <div className={flowStart? "direction__rectangle-2__container" : ""}>
+                  <div className="direction__rectangle-2__inner-container__circle tip-circle"> <div className={flowStart? "new-tip-circle-2" : ""}></div> </div>
                   <div className="direction__rectangle-2__inner-container direction__container"></div>
                 </div>
               </div>
